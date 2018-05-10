@@ -28,11 +28,8 @@ console.log(`
   Hey, I'm
   ${blue('Dario Vladović')} (also known as @vladimyr)
 
-  (⌐■_■)
-  ( •_•)>⌐■-■
-
-  I'm developer who enjoys writing javascript,
-  breaks and builds stuff for fun & profit.
+  (⌐■_■)        I'm developer who enjoys writing javascript,
+  ( •_•)>⌐■-■   breaks and builds stuff for fun & profit.
 `);
 
 const select = new Select({ choices });
