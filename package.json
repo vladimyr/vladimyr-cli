@@ -31,6 +31,7 @@
   "homepage": "https://github.com/vladimyr/vladimyr",
   "dependencies": {
     "ansi-blue": "^0.1.1",
+    "exit-hook": "^2.0.0",
     "opn": "^5.3.0",
     "prompt-list": "^3.1.2"
   },

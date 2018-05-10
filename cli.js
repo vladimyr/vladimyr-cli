@@ -5,6 +5,7 @@
 const { author } = require('./package.json');
 const { exit } = require('process');
 const blue = require('ansi-blue');
+const exitHook = require('exit-hook');
 const opn = require('opn');
 const Select = require('./prompt-select');
 
@@ -19,7 +20,7 @@ const choices = new Select.Choices([{
   url: 'https://keybase.io/vladimyr/key.asc'
 }, {
   name: 'Quit',
-  action: (_, prompt) => prompt.end()
+  action: () => exit()
 }]);
 
 console.log(`
@@ -34,7 +35,7 @@ console.log(`
 
 const select = new Select({ choices });
 select.on('select', onSelect);
-select.on('end', exit);
+exitHook(() => select.end());
 select.ask();
 
 function onSelect(choice) {

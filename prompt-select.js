@@ -4,9 +4,14 @@ const blue = require('ansi-blue');
 const List = require('prompt-list');
 
 class Select extends List {
-  end() {
-    super.end();
-    this.emit('end');
+  constructor(options = {}) {
+    super(options);
+    this.rl.removeListener('SIGINT', this.ui.forceClose);
+    process.removeListener('exit', this.ui.forceClose);
+  }
+
+  end(state) {
+    super.end(state);
   }
 
   renderChoice(choices) {
