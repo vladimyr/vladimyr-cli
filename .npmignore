@@ -1,0 +1,5 @@
+.editorconfig
+.eslint*
+.npmignore
+.travis.yml
+test/*

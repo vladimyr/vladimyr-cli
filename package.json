@@ -1,0 +1,46 @@
+{
+  "name": "vladimyr",
+  "version": "0.0.0",
+  "description": "vladimyr's cli",
+  "bin": {
+    "vladimyr": "cli.js"
+  },
+  "scripts": {
+    "lint": "eslint ."
+  },
+  "engines": {
+    "node": ">=8"
+  },
+  "keywords": [
+    "cli",
+    "vladimyr"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/vladimyr/vladimyr.git"
+  },
+  "author": {
+    "email": "d.vladimyr@gmail.com",
+    "name": "Dario Vladovic",
+    "url": "github.com/vladimyr"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vladimyr/vladimyr/issues"
+  },
+  "homepage": "https://github.com/vladimyr/vladimyr",
+  "dependencies": {
+    "ansi-blue": "^0.1.1",
+    "opn": "^5.3.0",
+    "prompt-list": "^3.1.2"
+  },
+  "devDependencies": {
+    "eslint": "^4.19.1",
+    "eslint-config-semistandard": "^12.0.1",
+    "eslint-config-standard": "^11.0.0",
+    "eslint-plugin-import": "^2.9.0",
+    "eslint-plugin-node": "^6.0.1",
+    "eslint-plugin-promise": "^3.7.0",
+    "eslint-plugin-standard": "^3.0.1"
+  }
+}
