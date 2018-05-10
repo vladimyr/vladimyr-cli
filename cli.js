@@ -3,7 +3,6 @@
 'use strict';
 
 const { author } = require('./package.json');
-const { exit } = require('process');
 const blue = require('ansi-blue');
 const exitHook = require('exit-hook');
 const opn = require('opn');
@@ -20,7 +19,7 @@ const choices = new Select.Choices([{
   url: 'https://keybase.io/vladimyr/key.asc'
 }, {
   name: 'Quit',
-  action: () => exit()
+  action: () => process.exit()
 }]);
 
 console.log(`

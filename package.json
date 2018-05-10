@@ -6,6 +6,7 @@
     "vladimyr": "cli.js"
   },
   "scripts": {
+    "preinstall": "node ./preinstall.js",
     "lint": "eslint ."
   },
   "engines": {
