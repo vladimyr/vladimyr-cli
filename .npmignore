@@ -2,4 +2,5 @@
 .eslint*
 .npmignore
 .travis.yml
+screenshot*
 test/*
