@@ -11,3 +11,7 @@ Install Node.js, then:
 ```
 $ npx vladimyr
 ```
+
+## Acknowledgments
+
+Inspired by @sindresorhus's awesome [CLI](https://github.com/sindresorhus/sindresorhus).
