@@ -2,20 +2,18 @@
 
 'use strict';
 
+const { author } = require('./package.json');
 const { exit } = require('process');
 const blue = require('ansi-blue');
 const opn = require('opn');
 const Select = require('./prompt-select');
 
-const atob = str => Buffer.from(str, 'base64').toString('binary');
-
-const mail = 'ZC52bGFkaW15citkZXZAZ21haWwuY29t';
 const choices = new Select.Choices([{
   name: 'Github',
   url: 'https://github.com/vladimyr'
 }, {
   name: 'Contact',
-  url: `mailto:${atob(mail)}`
+  url: `mailto:${author.email}`
 }, {
   name: 'Public key',
   url: 'https://keybase.io/vladimyr/key.asc'
