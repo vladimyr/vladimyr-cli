@@ -1,6 +1,6 @@
 {
   "name": "vladimyr",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "vladimyr's cli",
   "bin": {
     "vladimyr": "cli.js"
