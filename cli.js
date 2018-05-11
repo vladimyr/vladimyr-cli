@@ -30,7 +30,7 @@ console.log(`
   Hey, I'm
   ${blue('Dario Vladović')} (also known as @vladimyr)
 
-  (${g})        I'm developer who enjoys writing javascript,
+  (${g})        I'm a developer who enjoys writing javascript,
   ( •_•)>${g}   breaks and builds stuff for fun & profit.
 `);
 
