@@ -8,6 +8,7 @@ const exitHook = require('exit-hook');
 const opn = require('opn');
 const Select = require('./prompt-select');
 
+const config = { pointer: blue('❯') };
 const choices = new Select.Choices([{
   name: 'Github',
   url: 'https://github.com/vladimyr'
@@ -20,7 +21,7 @@ const choices = new Select.Choices([{
 }, {
   name: 'Quit',
   action: () => process.exit()
-}]);
+}], config);
 
 const g = `⌐${blue('■')}-${blue('■')}`;
 console.log(`
