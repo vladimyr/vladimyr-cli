@@ -8,7 +8,7 @@
   "scripts": {
     "preinstall": "node ./preinstall.js",
     "lint": "eslint .",
-    "release": "npm test && np --yolo"
+    "release": "np --yolo"
   },
   "engines": {
     "node": ">=8"
