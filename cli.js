@@ -22,14 +22,15 @@ const choices = new Select.Choices([{
   action: () => process.exit()
 }]);
 
+const g = `⌐${blue('■')}-${blue('■')}`;
 console.log(`
-  (⌐■_■)
+  (${g})
 
   Hey, I'm
   ${blue('Dario Vladović')} (also known as @vladimyr)
 
-  (⌐■_■)        I'm developer who enjoys writing javascript,
-  ( •_•)>⌐■-■   breaks and builds stuff for fun & profit.
+  (${g})        I'm developer who enjoys writing javascript,
+  ( •_•)>${g}   breaks and builds stuff for fun & profit.
 `);
 
 const select = new Select({ choices });
