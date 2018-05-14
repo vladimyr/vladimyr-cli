@@ -6,6 +6,8 @@ const List = require('prompt-list');
 class Select extends List {
   constructor(options = {}) {
     super(options);
+    this.action('number', (index, key) => this.onNumber(index, key));
+    this.action('space', index => this.onSpace(index));
     this.rl.removeListener('SIGINT', this.ui.forceClose);
     process.removeListener('exit', this.ui.forceClose);
   }
@@ -32,6 +34,17 @@ class Select extends List {
   submitAnswer(key) {
     const selected = this.choices.getChoice(key);
     this.emit('select', selected);
+  }
+
+  onNumber(index, { value }) {
+    const choice = this.choices.get(value - 1);
+    if (!choice) return index;
+    return choice.index;
+  }
+
+  onSpace(index) {
+    this.emit('select', this.choices.get(index));
+    return index;
   }
 }
 
