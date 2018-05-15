@@ -2,5 +2,6 @@
 .eslint*
 .npmignore
 .travis.yml
+renovate.json
 screenshot*
 test/*
