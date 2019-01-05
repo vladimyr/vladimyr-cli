@@ -5,9 +5,10 @@ import strip from 'rollup-plugin-strip';
 import resolve from 'rollup-plugin-node-resolve';
 import commonjs from 'rollup-plugin-commonjs';
 import json from 'rollup-plugin-json';
+import copy from 'rollup-plugin-cpy';
 import visualizer from 'rollup-plugin-visualizer';
 
-const sourceMap = false;
+const sourceMap = true;
 
 export default {
   input: 'cli.js',
@@ -43,6 +44,11 @@ export default {
     resolve(),
     commonjs({ sourceMap }),
     json(),
+    copy({
+      files: require.resolve('opn/xdg-open'),
+      dest: __dirname,
+      options: { verbose: true }
+    }),
     visualizer()
   ]
 };

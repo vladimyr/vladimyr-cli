@@ -15,4 +15,5 @@ npm-debug.log*
 
 # build artifacts
 cli.compact.js*
+xdg-open
 stats.html
