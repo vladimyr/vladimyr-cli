@@ -12,3 +12,7 @@ npm-debug.log*
 
 # general
 .DS_Store
+
+# build artifacts
+cli.compact.js*
+stats.html

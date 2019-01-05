@@ -1,5 +1,3 @@
-#!/usr/bin/env node
-
 'use strict';
 
 const { author } = require('./package.json');

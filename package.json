@@ -3,11 +3,17 @@
   "version": "1.3.0",
   "description": "vladimyr's cli",
   "bin": {
-    "vladimyr": "cli.js"
+    "vladimyr": "cli.compact.js"
   },
+  "files": [
+    "cli.compact.js",
+    "preinstall.js"
+  ],
   "scripts": {
     "preinstall": "node ./preinstall.js",
     "lint": "eslint .",
+    "build": "rollup -c rollup.config.js",
+    "prepublishOnly": "npm run build",
     "release": "np --yolo"
   },
   "engines": {
@@ -31,19 +37,28 @@
     "url": "https://github.com/vladimyr/vladimyr/issues"
   },
   "homepage": "https://github.com/vladimyr/vladimyr",
-  "dependencies": {
-    "ansi-blue": "^0.1.1",
-    "exit-hook": "^2.0.0",
-    "opn": "^5.4.0",
-    "prompt-list": "^3.2.0"
-  },
+  "dependencies": {},
   "devDependencies": {
+    "ansi-blue": "^0.1.1",
+    "camelcase": "^5.0.0",
     "eslint": "^5.12.0",
     "eslint-config-semistandard": "^13.0.0",
     "eslint-config-standard": "^12.0.0",
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-node": "^8.0.1",
     "eslint-plugin-promise": "^4.0.1",
-    "eslint-plugin-standard": "^4.0.0"
+    "eslint-plugin-standard": "^4.0.0",
+    "exit-hook": "^2.0.0",
+    "opn": "^5.4.0",
+    "prompt-list": "^3.2.0",
+    "rollup": "^1.0.2",
+    "rollup-plugin-commonjs": "^9.2.0",
+    "rollup-plugin-json": "^3.1.0",
+    "rollup-plugin-node-resolve": "^4.0.0",
+    "rollup-plugin-re": "^1.0.7",
+    "rollup-plugin-strip": "^1.2.1",
+    "rollup-plugin-visualizer": "^0.9.2",
+    "rollup-pluginutils": "^2.3.3",
+    "unlazy-loader": "^0.1.3"
   }
 }
