@@ -1,6 +1,6 @@
 {
   "name": "vladimyr",
-  "version": "1.4.0",
+  "version": "1.4.1",
   "description": "vladimyr's cli",
   "bin": {
     "vladimyr": "cli.compact.js"
