@@ -1,11 +1,12 @@
 import camelcase from 'camelcase';
-import unlazy from './unlazy.plugin.js';
-import replace from 'rollup-plugin-re';
-import strip from 'rollup-plugin-strip';
-import resolve from 'rollup-plugin-node-resolve';
 import commonjs from 'rollup-plugin-commonjs';
-import json from 'rollup-plugin-json';
 import copy from 'rollup-plugin-cpy';
+import json from 'rollup-plugin-json';
+import path from 'path';
+import replace from 'rollup-plugin-re';
+import resolve from 'rollup-plugin-node-resolve';
+import strip from 'rollup-plugin-strip';
+import unlazy from './unlazy.plugin.js';
 import visualizer from 'rollup-plugin-visualizer';
 
 const sourceMap = true;
@@ -42,7 +43,13 @@ export default {
     }),
     strip({ functions: ['debug'], sourceMap }),
     resolve(),
-    commonjs({ sourceMap }),
+    commonjs({
+      sourceMap,
+      ignore(id) {
+        return /package\.json/.test(id) &&
+          path.resolve(id) === path.resolve(__dirname, './package.json');
+      }
+    }),
     json(),
     copy({
       files: require.resolve('opn/xdg-open'),
