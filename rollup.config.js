@@ -2,7 +2,6 @@ import camelcase from 'camelcase';
 import commonjs from 'rollup-plugin-commonjs';
 import copy from 'rollup-plugin-cpy';
 import json from 'rollup-plugin-json';
-import path from 'path';
 import replace from 'rollup-plugin-re';
 import resolve from 'rollup-plugin-node-resolve';
 import strip from 'rollup-plugin-strip';
@@ -43,13 +42,7 @@ export default {
     }),
     strip({ functions: ['debug'], sourceMap }),
     resolve(),
-    commonjs({
-      sourceMap,
-      ignore(id) {
-        return /package\.json/.test(id) &&
-          path.resolve(id) === path.resolve(__dirname, './package.json');
-      }
-    }),
+    commonjs({ sourceMap }),
     json(),
     copy({
       files: require.resolve('opn/xdg-open'),
