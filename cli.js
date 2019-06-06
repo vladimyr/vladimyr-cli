@@ -1,12 +1,14 @@
 'use strict';
 
+const kleur = require('kleur');
+kleur.enabled = Boolean(process.stdout.isTTY);
+
 const { author } = require('./package.json');
-const blue = require('ansi-blue');
 const exitHook = require('exit-hook');
 const open = require('open');
 const Select = require('./prompt-select');
 
-const config = { pointer: blue('❯') };
+const config = { pointer: kleur.blue('❯') };
 const choices = new Select.Choices([{
   name: 'Github',
   url: author.url
@@ -21,12 +23,12 @@ const choices = new Select.Choices([{
   action: () => process.exit()
 }], config);
 
-const g = `⌐${blue('■')}-${blue('■')}`;
+const g = `⌐${kleur.blue('■')}-${kleur.blue('■')}`;
 console.log(`
   (${g})
 
   Hey, I'm
-  ${blue('Dario Vladović')} (also known as @vladimyr)
+  ${kleur.blue('Dario Vladović')} (also known as @vladimyr)
 
   (${g})        I'm a developer who enjoys writing javascript,
   ( •_•)>${g}   breaks and builds stuff for fun & profit.

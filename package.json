@@ -7,11 +7,11 @@
   },
   "files": [
     "cli.compact.js",
-    "preinstall.js",
+    "preinstall.compact.js",
     "xdg-open"
   ],
   "scripts": {
-    "preinstall": "node ./preinstall.js",
+    "preinstall": "node ./preinstall.compact.js",
     "lint": "eslint .",
     "build": "rollup -c rollup.config.js",
     "prepublishOnly": "npm run build",
@@ -41,7 +41,6 @@
   "homepage": "https://github.com/vladimyr/vladimyr",
   "dependencies": {},
   "devDependencies": {
-    "ansi-blue": "^0.1.1",
     "camelcase": "^5.3.1",
     "eslint": "^5.16.0",
     "eslint-config-semistandard": "^13.0.0",
@@ -51,6 +50,7 @@
     "eslint-plugin-promise": "^4.1.1",
     "eslint-plugin-standard": "^4.0.0",
     "exit-hook": "^2.2.0",
+    "kleur": "^3.0.3",
     "open": "^6.3.0",
     "prompt-list": "^3.2.0",
     "rollup": "^1.14.3",

@@ -10,7 +10,7 @@ import visualizer from 'rollup-plugin-visualizer';
 
 const sourceMap = true;
 
-export default {
+export default [{
   input: 'cli.js',
   output: {
     file: 'cli.compact.js',
@@ -51,4 +51,17 @@ export default {
     }),
     visualizer()
   ]
-};
+}, {
+  input: 'preinstall.js',
+  output: {
+    file: 'preinstall.compact.js',
+    format: 'cjs',
+    sourcemap: sourceMap
+  },
+  external: require('module').builtinModules,
+  plugins: [
+    resolve(),
+    commonjs({ sourceMap }),
+    json()
+  ]
+}];
