@@ -15,7 +15,7 @@
     "lint": "eslint .",
     "build": "rollup -c rollup.config.js",
     "prepublishOnly": "npm run build",
-    "release": "np --yolo"
+    "release": "npx np"
   },
   "engines": {
     "node": ">=8"
