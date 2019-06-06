@@ -45,7 +45,7 @@ export default {
     commonjs({ sourceMap }),
     json(),
     copy({
-      files: require.resolve('opn/xdg-open'),
+      files: require.resolve('open/xdg-open'),
       dest: __dirname,
       options: { verbose: true }
     }),

@@ -3,7 +3,7 @@
 const { author } = require('./package.json');
 const blue = require('ansi-blue');
 const exitHook = require('exit-hook');
-const opn = require('opn');
+const open = require('open');
 const Select = require('./prompt-select');
 
 const config = { pointer: blue('❯') };
@@ -38,6 +38,6 @@ exitHook(() => select.end());
 select.ask();
 
 function onSelect(choice) {
-  if (choice.url) return opn(choice.url);
+  if (choice.url) return open(choice.url);
   return choice.action && choice.action(choice, select);
 }
