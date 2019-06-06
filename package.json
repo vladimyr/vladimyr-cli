@@ -7,11 +7,11 @@
   },
   "files": [
     "cli.compact.js",
-    "preinstall.compact.js",
+    "preflight.compact.js",
     "xdg-open"
   ],
   "scripts": {
-    "preinstall": "node ./preinstall.compact.js",
+    "preinstall": "node ./preinstall.js",
     "lint": "eslint .",
     "build": "rollup -c rollup.config.js",
     "prepublishOnly": "npm run build",

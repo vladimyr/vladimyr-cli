@@ -52,9 +52,9 @@ export default [{
     visualizer()
   ]
 }, {
-  input: 'preinstall.js',
+  input: 'preflight.js',
   output: {
-    file: 'preinstall.compact.js',
+    file: 'preflight.compact.js',
     format: 'cjs',
     sourcemap: sourceMap
   },
