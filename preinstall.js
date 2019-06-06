@@ -1,7 +1,6 @@
 'use strict';
 
 const kleur = require('kleur');
-kleur.enabled = Boolean(process.stdout.isTTY);
 
 const { name } = require('./package.json');
 const fs = require('fs');
