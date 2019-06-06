@@ -31,7 +31,8 @@
   "author": {
     "email": "d.vladimyr+dev@gmail.com",
     "name": "Dario Vladovic",
-    "url": "https://github.com/vladimyr"
+    "url": "https://github.com/vladimyr",
+    "pubkey": "https://keybase.io/vladimyr/key.asc"
   },
   "license": "MIT",
   "bugs": {

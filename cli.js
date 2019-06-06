@@ -9,13 +9,13 @@ const Select = require('./prompt-select');
 const config = { pointer: blue('❯') };
 const choices = new Select.Choices([{
   name: 'Github',
-  url: 'https://github.com/vladimyr'
+  url: author.url
 }, {
   name: 'Contact',
   url: `mailto:${author.email}`
 }, {
   name: 'Public key',
-  url: 'https://keybase.io/vladimyr/key.asc'
+  url: author.pubkey
 }, {
   name: 'Quit',
   action: () => process.exit()
