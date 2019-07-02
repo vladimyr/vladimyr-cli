@@ -56,7 +56,7 @@
     "prompt-list": "^3.2.0",
     "rollup": "^1.14.3",
     "rollup-plugin-commonjs": "^10.0.0",
-    "rollup-plugin-cpy": "^1.1.0",
+    "rollup-plugin-cpy": "^2.0.0",
     "rollup-plugin-json": "^4.0.0",
     "rollup-plugin-node-resolve": "^5.0.1",
     "rollup-plugin-re": "^1.0.7",
