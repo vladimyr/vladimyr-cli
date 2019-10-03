@@ -1,7 +1,7 @@
 'use strict';
 
 const kleur = require('kleur');
-kleur.enabled = require('./supports-color');
+kleur.enabled = require('./lib/supports-color');
 
 const { name } = require('./package.json');
 const fs = require('fs');

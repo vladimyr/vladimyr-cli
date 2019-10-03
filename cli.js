@@ -1,12 +1,12 @@
 'use strict';
 
 const kleur = require('kleur');
-kleur.enabled = require('./supports-color');
+kleur.enabled = require('./lib/supports-color');
 
 const { author } = require('./package.json');
 const exitHook = require('exit-hook');
 const open = require('open');
-const Select = require('./prompt-select');
+const Select = require('./lib/prompt-select');
 
 const config = { pointer: kleur.blue('❯') };
 const choices = new Select.Choices([{
