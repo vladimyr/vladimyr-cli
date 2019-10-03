@@ -1,7 +1,7 @@
 'use strict';
 
 const kleur = require('kleur');
-kleur.enabled = Boolean(process.stdout.isTTY);
+kleur.enabled = require('./supports-color');
 
 const { author } = require('./package.json');
 const exitHook = require('exit-hook');
