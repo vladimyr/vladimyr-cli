@@ -1,5 +1,5 @@
-import unlazyLoader from 'unlazy-loader';
 import { createFilter } from 'rollup-pluginutils';
+import unlazyLoader from 'unlazy-loader';
 
 export default function unlazy(options = {}) {
   const filter = createFilter(options.include, options.exclude);

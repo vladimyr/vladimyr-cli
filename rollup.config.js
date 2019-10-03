@@ -10,7 +10,8 @@ import visualizer from 'rollup-plugin-visualizer';
 
 const sourceMap = true;
 
-export default [{
+/** @type {Array<import('rollup').RollupOptions>} */
+const config = [{
   input: 'cli.js',
   output: {
     file: 'cli.compact.js',
@@ -65,3 +66,5 @@ export default [{
     json()
   ]
 }];
+
+export default config;

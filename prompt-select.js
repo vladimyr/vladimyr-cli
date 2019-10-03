@@ -1,6 +1,6 @@
 'use strict';
 
-const blue = require('ansi-blue');
+const kleur = require('kleur');
 const List = require('prompt-list');
 
 class Select extends List {
@@ -19,7 +19,7 @@ class Select extends List {
   renderChoice(choices) {
     return function (line) {
       const selected = choices.get(choices.position);
-      return this === selected ? blue(line) : line;
+      return this === selected ? kleur.blue(line) : line;
     };
   }
 
