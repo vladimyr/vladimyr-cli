@@ -62,7 +62,7 @@
     "rollup-plugin-node-resolve": "^5.2.0",
     "rollup-plugin-re": "^1.0.7",
     "rollup-plugin-strip": "^1.2.2",
-    "rollup-plugin-visualizer": "^1.1.1",
+    "rollup-plugin-visualizer": "^3.0.0",
     "rollup-pluginutils": "^2.8.2",
     "unlazy-loader": "^0.1.3"
   }
