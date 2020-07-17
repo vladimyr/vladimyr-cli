@@ -14,4 +14,4 @@ $ npx vladimyr
 
 ## Acknowledgments
 
-Inspired by @sindresorhus's awesome [CLI](https://github.com/sindresorhus/sindresorhus).
+Inspired by @sindresorhus's awesome [CLI](https://github.com/sindresorhus/sindresorhus-cli).
