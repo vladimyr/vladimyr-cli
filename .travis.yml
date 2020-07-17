@@ -2,7 +2,15 @@ language: node_js
 node_js:
   - '8'
   - '10'
-  - 'stable'
+  - '12'
+  - 'lts/*'
+  - 'node'
+
+matrix:
+  include:
+    - node_js: '8'
+      env: NO_LINT=true
+
 script:
-  - npm run lint
+  - if [[ -z "$NO_LINT" ]]; then npm run lint; fi
   - npm test
