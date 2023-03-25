@@ -53,7 +53,7 @@
     "eslint-plugin-standard": "^4.0.1",
     "exit-hook": "^2.2.0",
     "kleur": "^3.0.3",
-    "open": "^7.0.0",
+    "open": "^9.0.0",
     "prompt-list": "^3.2.0",
     "rollup": "^2.0.0",
     "rollup-plugin-commonjs": "^10.1.0",
