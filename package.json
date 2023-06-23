@@ -44,7 +44,7 @@
   "devDependencies": {
     "@vladimyr/eslint-config": "^1.1.1",
     "camelcase": "^5.3.1",
-    "eslint": "^6.5.1",
+    "eslint": "^8.0.0",
     "eslint-config-semistandard": "^15.0.0",
     "eslint-config-standard": "^14.1.0",
     "eslint-plugin-import": "^2.18.2",
